@@ -120,7 +120,8 @@ public class MinesweeperWP {
 		for(int i = 0; i < fields.size(); i++) 
 		{
 			String[][] temp = fields.get(i);
-			for (int j = 0; j < temp.length; j++){
+			for (int j = 0; j < temp.length; j++)
+			{
 		        for (int k = 0; k < temp[j].length; k++)
 		        {
 		            if (!(temp[j][k].contains("*")))
