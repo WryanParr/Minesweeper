@@ -13,8 +13,10 @@ import java.util.regex.*;
 public class MinesweeperWP {
 
 	//Main method that executes the program and it's contained functions.
-	public static void main(String[] args) {
-		if(args.length <= 0) {
+	public static void main(String[] args) 
+	{
+		if(args.length <= 0) 
+		{
 			System.out.println("Usage: java Minesweeper minefieldtxt");
 			System.exit(0);
 		}
@@ -33,7 +35,8 @@ public class MinesweeperWP {
 	//int - number of minefields in input file
 	//Catches:
 	//Catches a general Exception
-	public static int CountFields(String fileName) {
+	public static int CountFields(String fileName) 
+	{
 		String line = "";
 		int fields = 0;
 		FileReader fileR = null;
@@ -41,18 +44,22 @@ public class MinesweeperWP {
 		try{
 			fileR = new FileReader(fileName);
 			bufferedR = new BufferedReader(fileR);
-			while(!((line = bufferedR.readLine()).contains("0 0"))) {
-				if(IsFieldSize(line)) {
+			while(!((line = bufferedR.readLine()).contains("0 0"))) 
+			{
+				if(IsFieldSize(line)) 
+				{
 					fields++;
 				}
 			}	
-		} catch (Exception e) {
+		} catch (Exception e) 
+		{
 			e.printStackTrace();
 		}finally {
 			try {
 				bufferedR.close();
 				fileR.close();
-			} catch (IOException e) {
+			} catch (IOException e) 
+			{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
@@ -134,7 +141,8 @@ public class MinesweeperWP {
 		                    {
 		                        if (0 <= l && l < temp.length && 0 <= m && m < temp[j].length)
 		                        {
-		                            if (temp[l][m].contains("*")) {
+		                            if (temp[l][m].contains("*")) 
+					    {
 		                                ++count;
 		                            }
 		                        }
